@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Activity Tracker</title>
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" href="about:blank">
+
+</head>
+  <body onload="fetchIssues()">
+    <div class="container">
+      <h1>Activity Tracker<small> by Corpore Sano</small></h1>
+      <div class="jumbotron">
+        <h3>Add New Activity:</h3>
+        <form id="issueInputForm">
+		<div class="form-group">
+            <label for="issueDescInput">Activity Type</label>
+             <select class="form-control" id="issueSeverityInput">
+			  <option style="color:gray"  value="null" disabled selected>Select your activity</option>
+              <option value="Swim">Swim</option>
+              <option value="Run">Run</option>
+              <option value="Hike">Hike</option>
+            </select> 
+          </div>
+          <div class="form-group">
+            <label for="issueDescInput">Intensity</label>
+            <input type="number" min="1" max="10" class="form-control" id="issueDescInput" placeholder="Quantify the workout intensity ...">
+          </div>
+          
+          <div class="form-group">
+            <label for="issueDescInput">Username</label>
+            <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter username ...">
+          </div>
+		  <div class="form-group">
+            <label for="issueDescInput">Description</label>
+			<textarea name="Text1" class="form-control" id="issueAssignedToInput" placeholder="Enter description of activity..."  rows="5"></textarea>
+
+          </div>
+		  <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div id="issuesList">
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>&copy CorporeSano.com</p>
+      </div>
+    </div>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://chancejs.com/chance.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script>
+
+function httppostrequest(url, postData){
+
+	var method = "POST";
+	var shouldBeAsync = true;
+
+	var request = new XMLHttpRequest();
+
+	request.onload = function () {
+
+	 
+	   var status = request.status; // HTTP response status, e.g., 200 for "200 OK"
+	   var data = request.responseText; // Returned data, e.g., an HTML document.
+	}
+
+	request.open(method, url, shouldBeAsync);
+
+	request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+	request.send(postData);
+}	
+function fetchIssues () {
+  var issues = JSON.parse(localStorage.getItem('issues'));
+  var issuesList = document.getElementById('issuesList');
+  if(issues){
+	  issuesList.innerHTML = '';
+	  
+	  for (var i = 0; i < issues.length; i++) {
+		var id = issues[i].id;
+		var desc = issues[i].description;
+		var severity = issues[i].severity;
+		var assignedTo = issues[i].assignedTo;
+		var status = issues[i].status;
+		
+		issuesList.innerHTML +=   '<div class="well">'+
+								  '<h6>Issue ID: ' + id + '</h6>'+
+								  '<p><span class="label label-info">' + status + '</span></p>'+
+								  '<h3>' + desc + '</h3>'+
+								  '<p><span class="glyphicon glyphicon-time"></span> ' + severity + ' '+
+								  '<span class="glyphicon glyphicon-user"></span> ' + assignedTo + '</p>'+
+								  '<a href="#" class="btn btn-warning" onclick="setStatusClosed(\''+id+'\')">Close</a> '+
+								  '<a href="#" class="btn btn-danger" onclick="deleteIssue(\''+id+'\')">Delete</a>'+
+								  '</div>';
+	  }
+  }
+}
+
+
+var el = document.getElementById('issueInputForm');
+if(el){
+  el.addEventListener('submit', saveIssue);
+
+}
+
+function saveIssue(e) {
+  var issueId = chance.guid();
+  var issueDesc = document.getElementById('issueDescInput').value;
+  var issueSeverity = document.getElementById('issueSeverityInput').value;
+  var issueAssignedTo = document.getElementById('issueAssignedToInput').value;
+  var issueStatus = 'Open';
+  var issue = {
+    id: issueId,
+    description: issueDesc,
+    severity: issueSeverity,
+    assignedTo: issueAssignedTo,
+    status: issueStatus
+  
+  }
+  httppostrequest("putdatapoint", JSON.stringify(issue));
+  
+  document.getElementById('issueInputForm').reset();
+ 
+  fetchIssues();
+  
+  e.preventDefault(); 
+}
+
+
+
+function setStatusClosed (id) {
+  var issues = JSON.parse(localStorage.getItem('issues'));
+  
+  for(var i = 0; i < issues.length; i++) {
+    if (issues[i].id == id) {
+      issues[i].status = "Closed";
+    }
+  }
+    
+  localStorage.setItem('issues', JSON.stringify(issues));
+  
+  fetchIssues();
+}
+
+
+function deleteIssue (id) {
+  var issues = JSON.parse(localStorage.getItem('issues'));
+  
+  for(var i = 0; i < issues.length; i++) {
+    if (issues[i].id == id) {
+      issues.splice(i, 1);
+    }
+  }
+  
+  localStorage.setItem('issues', JSON.stringify(issues));
+  
+  fetchIssues();
+}
+
+</script>
+</body>
+</html>

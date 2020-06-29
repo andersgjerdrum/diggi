@@ -1,0 +1,39 @@
+
+enclave {
+    include "posix/syscall_def.h"
+    include "sgx_utils.h"
+	include "datatypes.h"
+    include "posix/io_types.h"
+    from "sgx_tkey_exchange.edl" import *;
+    include "sgx_key_exchange.h"
+    include "sgx_trts.h"
+	trusted{
+
+		public void ecall_enclave_entry_client(aid_t self, sgx_enclave_id_t id, size_t base_thread_id, [user_check] void *global_memory_buffer, [user_check] void *input_q, [user_check] void *output_q, [user_check] void *map, size_t len, [in, string] const char *func_name, size_t expected_threads);
+		public void ecall_enclave_stop();
+        public void ecall_new_thread();
+        public void ecall_create_enclave_report([in,out]sgx_report_t *report, [in,out]sgx_target_info_t *targetinfo);
+
+
+	};
+	untrusted{
+		void ocall_sig_assert(void);
+		void ocall_sleep(uint64_t usec);
+        // printf
+        void ocall_print_string_diggi([in, string] const char *name, [in, string] const char *str, int thrdid, uint64_t enc_id);
+		void ocall_telemetry_capture([in, string] const char *tag);
+        // Remote Attestation
+        void ocall_prepare_msg0([user_check] void *data);
+        void ocall_prepare_msg1([user_check] void *data, sgx_enclave_id_t enclave_id, sgx_ra_context_t context) allow (sgx_ra_get_ga);
+        sgx_ra_msg3_t * ocall_prepare_msg2(sgx_ra_context_t context, sgx_enclave_id_t enclave_id, [user_check] void * msg2, size_t msg2_size) allow(sgx_ra_proc_msg2_trusted, sgx_ra_get_msg3_trusted);
+
+
+
+        // for testing purpouses, not to be used in prod
+        int ocall_open([in, string] const char *path, int oflags, mode_t mode);
+        int ocall_read(int fildes, [in, out, size = nbyte] char * buf, size_t nbyte);
+        int ocall_write(int fd, [in, out, size = count] char * buf, size_t count);
+        off_t ocall_lseek(int fd,  off_t offset, int whence);
+	};
+
+};

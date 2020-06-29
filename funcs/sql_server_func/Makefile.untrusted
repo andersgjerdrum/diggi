@@ -1,0 +1,8 @@
+#
+# Library func Makefile
+#
+
+CFLAGS+= -D__USE_UNIX98 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_DISABLE_LFS -DSQLITE_OMIT_WAL -DSQLITE_THREADSAFE=2
+
+include scripts/template_makefiles/lib_runtime/Makefile
+

@@ -1,0 +1,9 @@
+#
+# Library func Makefile
+#
+
+#-lmbedtls -lmbedx509 -lmbedcrypto
+
+CFLAGS+= -D__USE_UNIX98 -DMG_ENABLE_SSL=1 -DMG_SSL_IF=MG_SSL_IF_MBEDTLS -DMG_SSL_MBED_DUMMY_RANDOM 
+
+include scripts/template_makefiles/lib_runtime/Makefile

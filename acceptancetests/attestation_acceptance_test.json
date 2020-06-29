@@ -1,0 +1,33 @@
+{
+    "BuildMode": "DEBUG",
+    "TrustedHardwareMode": "HW",
+    "DebugTargetProcess": "1",
+    "DebugEngine": "",
+    "structure": {
+        "process-1": {
+            "network": "127.0.0.1:6000",
+            "funcs": {
+                "trusted_root_func": {
+                    "trusted-root": "1",
+                    "threads": "1",
+                    "messageencryption": "1"
+                },
+                "test_server_func@1": {
+                    "attestation-group": "1",
+                    "threads": "1",
+                    "messageencryption": "1"
+                },
+                "test_client_func@1": {
+                    "attestation-group": "1",
+                    "connected-to": "test_server_func@1",
+                    "threads": "1",
+                    "messageencryption": "1"
+                }
+            },
+            "enclave": {
+                "funcs": {
+                }
+            }
+        }
+    }
+}

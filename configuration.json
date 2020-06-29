@@ -1,0 +1,67 @@
+{
+    "BuildMode": "LRELEASE",
+    "TrustedHardwareMode": "HW",
+    "DebugTargetProcess": "1",
+    "DebugEngine": "",
+    "structure": {
+        "process-1": {
+            "network": "127.0.0.1:6000",
+            "funcs": {
+                "trusted_root_func": {
+                    "LogLevel": "LRELEASE",
+                    "trusted-root": "1",
+                    "threads": "1",
+                    "messageencryption": "1"
+                },
+                "file_io_func": {
+                    "skip-attestation": "0",
+                    "attestation-group": "1",
+                    "threads": "1",
+                    "messageencryption": "0"
+                },
+                "mnist_loader_func": {
+                    "LogLevel": "LRELEASE",
+                    "skip-attestation": "0",
+                    "train-sample-count": " 6000",
+                    "test-sample-count": " 1000",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "attestation-group": "1",
+                    "train-image-path": "train-images-idx3-ubyte",
+                    "train-label-path": "train-labels-idx1-ubyte",
+                    "test-image-path": "t10k-images-idx3-ubyte",
+                    "test-label-path": "t10k-labels-idx1-ubyte",
+                    "load-target-db-func": "sql_server_func"
+                },
+                "neural_network_train_func": {
+                    "LogLevel": "LRELEASE",
+                    "skip-attestation": "0",
+                    "attestation-group": "1",
+                    "threads": "1",
+                    "messageencryption": "1",
+                    "syscall-interposition": "0",
+                    "output-layers": "10",
+                    "hidden-layers": "300",
+                    "epochs": "1",
+                    "learning-rate": "0.1",
+                    "data-source": "sql_server_func"
+                }
+            },
+            "enclave": {
+                "funcs": {
+                    "sql_server_func": {
+                        "LogLevel": "LRELEASE",
+                        "record-func": "0",
+                        "skip-attestation": "0",
+                        "attestation-group": "1",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    }
+                }
+            }
+        }
+    }
+}

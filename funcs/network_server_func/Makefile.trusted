@@ -1,0 +1,7 @@
+#
+# Enclave func Makefile
+#
+
+Enclave_C_Flags+= -D__USE_UNIX98 -DMG_ENABLE_SSL=1 -DMG_SSL_IF=MG_SSL_IF_MBEDTLS 
+
+include scripts/template_makefiles/enclave_runtime/Makefile

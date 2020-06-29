@@ -1,0 +1,12 @@
+#
+# Enclave func Makefile
+#
+Enclave_C_Flags+= -D__USE_UNIX98  -DSQLITE_DISABLE_LFS -DSQLITE_OMIT_LOAD_EXTENSION
+Enclave_Include_Paths += -Ifuncs/sql_server_func
+EXTERNALOBJECTS = enclave/lib/sqlite3.o
+
+include scripts/template_makefiles/enclave_runtime/Makefile
+
+enclave/lib/sqlite3.o: funcs/sql_server_runtime/sqlite3.c
+	@$(CC) $(Enclave_C_Flags)  -c $< -o $@
+	@echo "CC  <=  $<"

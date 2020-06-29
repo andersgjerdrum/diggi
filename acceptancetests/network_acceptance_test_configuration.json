@@ -1,0 +1,30 @@
+{
+    "BuildMode": "DEBUG",
+    "TrustedHardwareMode": "SIM",
+    "DebugTargetProcess": "1",
+    "DebugEngine": "",
+    "structure": {
+        "process-1": {
+            "network": "127.0.0.1:6000",
+            "funcs": {
+                "mongoose_client_func": {
+                    "url": "127.0.0.1",
+                    "threads": "1",
+                    "http_port": "8000"
+                }
+            },
+            "enclave": {
+                "funcs": {
+                    "network_server_func": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "http_port": "8000",
+                        "document_root": "/home/larsb/www",
+                        "html": "<title>hack!</title><body>Here is an empty placeholder webpage</body>"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+[ {
+    "string" : "foo",
+    "int1" : 1,
+    "int2" : 0,
+    "datetime" : "2013-02-05T07:25Z",
+    "largeint" : 1360049100000,
+    "float" : 1.1,
+    "datetime2": "2013-02-05"
+  }
+]

@@ -1,0 +1,542 @@
+"ARRAYObject": [
+    {
+        "header": {
+            "id": "foo",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "foo1",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "foo2",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "foo3",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar1",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar2",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar3",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar4",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar5",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar6",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar7",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "bar8",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "afssa",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    },
+    {
+        "header": {
+            "id": "jdshfkfjdsf",
+            "schema_id": {
+                "namespace": "omh",
+                "name": "physical-activity",
+                "version": {
+                    "major": "1",
+                    "minor": "0",
+                    "qualifier": "null"
+                }
+            },
+            "creation_date_time": "2013-02-05T075Z",
+            "acquisition_provenance": {
+                "source_name": "RunKeeper",
+                "source_creation_date_time": "null",
+                "modality": "sensed"
+            },
+            "media": [],
+            "creation_date_time_epoch_milli": "1360049100000"
+        },
+        "body": {
+            "activity_name": "walking",
+            "distance": {
+                "value": "1.5",
+                "unit": "mi"
+            },
+            "reported_activity_intensity": "moderate",
+            "effective_time_frame": {
+                "time_interval": {
+                    "date": "2013-02-05",
+                    "part_of_day": "morning"
+                }
+            }
+        }
+    }
+]

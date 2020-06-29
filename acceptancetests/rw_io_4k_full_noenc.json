@@ -1,0 +1,33 @@
+{
+    "BuildMode": "RELEASE",
+    "TrustedHardwareMode": "HW",
+    "DebugTargetProcess": "1",
+    "DebugEngine": "",
+    "structure": {
+        "process-1": {
+            "network": "127.0.0.1:6000",
+            "funcs": {
+                "file_io_func": {
+                        "skip-attestation": "1",
+
+                    "threads": "1",
+                    "messageencryption": "0"
+                }
+            },
+            "enclave": {
+                "funcs": {
+                    "test_rw_func": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "0",
+                        "syscall-interposition": "1",
+                        "fileencryption": "0",
+                        "Block-size": "4096",
+                        "Iterations": "1000"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+#
+# Library func Makefile
+#
+
+CFLAGS+= -D__USE_UNIX98 -DSQLITE_OMIT_LOAD_EXTENSION  -DSQLITE_DISABLE_LFS -Ifuncs/sql_server_func
+
+EXTERNALOBJECTS = lib_harness/sqlite3.o
+
+include scripts/template_makefiles/lib_runtime/Makefile
+
+lib_harness/sqlite3.o: funcs/sql_server_runtime/sqlite3.c
+	@$(LIB_CC) $(CFLAGS) -c $< -o $@
+	@echo "CC  <=  $<"

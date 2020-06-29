@@ -1,0 +1,241 @@
+{
+    "BuildMode": "DEBUG",
+    "TrustedHardwareMode": "HW",
+    "DebugTargetProcess": "1",
+    "DebugEngine": "",
+    "structure": {
+        "process-1": {
+            "network": "192.168.1.136:6000",
+            "funcs": {
+                "file_io_func": {
+                        "skip-attestation": "1",
+
+                    "threads": "1",
+                    "messageencryption": "0"
+                }
+            },
+            "enclave": {
+                "funcs": {
+                    "sql_server_func@1": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@2": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@3": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@4": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@5": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@6": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@7": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@8": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@9": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    },
+                    "sql_server_func@10": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1",
+                        "messageencryption": "1",
+                        "syscall-interposition": "1",
+                        "fileencryption": "1",
+                        "in-memory": "0"
+                    }
+                }
+            }
+        },
+        "process-2": {
+            "network": "192.168.1.137:6002",
+            "funcs": {
+                "test_concurrent_db_client_func@1": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@1",
+                    "wait-for-load": "0",
+                    "master": "1",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@2": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@2",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@3": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@3",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@4": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@4",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@5": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@5",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@6": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@6",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@7": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@7",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@8": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@8",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@9": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@9",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                },
+                "test_concurrent_db_client_func@10": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "threads": "1",
+                    "messageencryption": "0",
+                    "syscall-interposition": "0",
+                    "connected-to": "sql_server_func@10",
+                    "wait-for-load": "1",
+                    "master": "0",
+                    "load": "1",
+                    "Duration": "10"
+                }
+            },
+            "enclave": {
+                "funcs": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,180 @@
+{
+    "BuildMode": "DEBUG",
+    "TrustedHardwareMode": "HW",
+    "DebugTargetProcess": "1",
+    "DebugEngine": "",
+    "structure": {
+        "process-1": {
+            "network": "192.168.1.136:6000",
+            "funcs": {},
+            "enclave": {
+                "funcs": {
+                    "test_server_func@1": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@2": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@3": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@4": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@5": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@6": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@7": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@8": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@9": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@10": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@11": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    },
+                    "test_server_func@12": {
+                        "skip-attestation": "1",
+                        "attestation-group": "0",
+                        "threads": "1"
+                    }
+                }
+            }
+        },
+        "process-2": {
+            "network": "192.168.1.137:6002",
+            "funcs": {
+                "test_client_latency_func@1": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@1",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@2": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@2",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@3": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@3",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@4": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@4",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@5": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@5",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@6": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@6",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@7": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@7",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@8": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@8",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@9": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@9",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@10": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@10",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@11": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "wait-for-load": "1",
+                    "connected-to": "test_server_func@11",
+                    "threads": "1",
+                    "Duration": "10"
+                },
+                "test_client_latency_func@12": {
+                    "skip-attestation": "1",
+                    "attestation-group": "0",
+                    "master": "1",
+                    "connected-to": "test_server_func@12",
+                    "threads": "1",
+                    "Duration": "10"
+                }
+            },
+            "enclave": {
+                "funcs": {}
+            }
+        }
+    }
+}
