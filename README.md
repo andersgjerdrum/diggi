@@ -1,3 +1,8 @@
+# License
+
+This work is licensed under creative commons Attribution 3.0 Unported (CC BY 3.0)
+https://creativecommons.org/licenses/by/3.0/deed.en_US
+
 # Coding standard
 
 For developers of diggi: adhere to the following coding standards adopted from CMU department of electrical engineering
